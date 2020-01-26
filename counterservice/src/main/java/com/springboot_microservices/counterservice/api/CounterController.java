@@ -1,4 +1,4 @@
-package api;
+package com.springboot_microservices.counterservice.api;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
