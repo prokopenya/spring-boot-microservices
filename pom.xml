@@ -10,6 +10,7 @@
 
     <modules>
         <module>counterservice</module>
+        <module>configserver</module>
     </modules>
 
 </project>

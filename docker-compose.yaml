@@ -4,3 +4,7 @@ services:
     build: counterservice
     ports:
       - "8080:8080"
+  configserver:
+    build: configserver
+    ports:
+      - "8888:8888"
