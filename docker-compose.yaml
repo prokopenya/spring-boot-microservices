@@ -1,10 +1,28 @@
-version: '3'
+version: '2'
 services:
-  counterservice:
-    build: counterservice
+  registryservice:
+    build: registryservice
+    mem_limit: 256M
     ports:
-      - "8080:8080"
+      - "8761:8761"
   configserver:
     build: configserver
+    mem_limit: 256M
     ports:
       - "8888:8888"
+  counterservice:
+    build: counterservice
+    mem_limit: 256M
+    ports:
+      - "8080:8080"
+  gatewayservice:
+    build: gatewayservice
+    mem_limit: 256M
+    ports:
+      - "9999:9999"
+    links:
+      - counterservice:counterservice
+      - registryservice:registryservice
+    depends_on:
+      - counterservice
+      - registryservice
