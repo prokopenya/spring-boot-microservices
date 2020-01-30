@@ -1,1 +1,1 @@
-![alt text](https://github.com/prokopenya/spring-boot-microservices/docs/file.png)
+![alt text](https://github.com/prokopenya/spring-boot-microservices/blob/master/docs/file.png)
